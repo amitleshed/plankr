@@ -81,12 +81,29 @@ body{
 
 .home-grid__intro{
   max-width: 100%;
-  grid-column: 3 / span 11;
+  grid-column: 3 / span 20;
   padding-top: 3em;
   background-color: transparent;
   
+  @media (min-width: 820px){
+    max-width: 100%;
+    grid-column: 3 / span 11;
+    padding-top: 3em;
+    background-color: transparent; 
+  }
+  
   p{
     font-size: 140%;
+  }
+}
+
+.home-grid__intro-bg{
+  padding-top: 20em;
+  background: #fff image-url('head-graphic.svg') center top 2em/13em no-repeat;
+  
+  @media (min-width: 820px){
+    padding-top: 0em;
+    background: #fff image-url('head-graphic.svg') right 8rem top 4em/25vw no-repeat;
   }
 }
 
@@ -134,11 +151,4 @@ body{
 
 .grid__item--xlarge {
     grid-column: 3 / span 20;
-}
-
-.home-grid__graphic{
-  max-width: 100%;
-  grid-column: 17 / span 5;
-  padding-top: 3em;
-  background-color: transparent;
 }
