@@ -1,0 +1,29 @@
+/*
+ *= require_tree ./welcome
+ */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+p, ul, ol {
+    margin: 0 0 1em 0;
+    padding: 0;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+}
+
+hr{
+  display: block;
+  clear: both;
+  width: 33%;
+  margin: 3em auto;
+  border: 0;
+  border-top: 0.1rem solid rgba(0,0,0,0.1);
+}

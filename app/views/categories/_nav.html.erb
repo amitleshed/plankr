@@ -1,0 +1,21 @@
+<div id="nav" class="pure-u">
+    <div class="logo-container">
+      <div class="logo-wrapper">
+        <%= link_to notes_path do %>
+          <%= image_tag('logo-head.svg') %>
+        <% end %>
+      </div>
+    </div>
+    
+    <div id="small-nav">
+      <a href="/notes" class="small-nav-logo">
+        <%= image_tag('logo-head.svg') %>
+      </a>
+      <ul class="nav-list">
+      </ul>
+    </div>
+    
+    <div class="nav-inner">
+        <%= link_to 'Music', categories_path %>
+    </div>
+</div>

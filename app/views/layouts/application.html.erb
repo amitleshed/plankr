@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= tag.link rel: 'icon', sizes: '192x192', href: asset_url("logo-head-favicon.png") %>
+    <title>Plankr</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if notice -%>
+      <span class="notice"><%= notice %></span>
+    <% end %>
+    <div id="layout" class="content pure-g">
+        <%= yield %>
+    </div>
+  </body>
+</html>

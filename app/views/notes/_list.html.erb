@@ -1,0 +1,16 @@
+<div id="list" class="pure-u-1">
+  <% @notes.each do |note|%>
+    <%= link_to note_path(note) do %>
+    <div class="note-item pure-g <%= select_current_note(note.id) %>">
+        <div class="pure-u-3-4">
+            <h5 class="note-name">
+              <%= note.title %>
+            </h5>
+            <p class="note-desc">
+              <%= note.content.html_safe.truncate(100) %>
+            </p>
+        </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>

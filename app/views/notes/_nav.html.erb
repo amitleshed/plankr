@@ -1,0 +1,32 @@
+<div id="nav" class="pure-u">
+    <div class="logo-container">
+      <div class="logo-wrapper">
+        <%= link_to notes_path do %>
+          <%= image_tag('logo-head.svg') %>
+        <% end %>
+      </div>
+    </div>
+    
+    <div id="small-nav">
+      <a href="/notes" class="small-nav-logo">
+        <%= image_tag('logo-head.svg') %>
+      </a>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <%= link_to 'Add a note', new_note_path, class: "primary-button pure-button" %>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="nav-inner">
+      <% if current_person %>
+        <%= link_to 'Add a note', new_note_path, class: "primary-button pure-button" %>
+        <p>Logged in as <%= current_person.name %></p>
+        <%= link_to 'Log out', logout_path, method: "delete", class: "secondary-button pure-button" %>
+      <% else %>
+        <%= link_to 'Add a note', new_session_path, class: "primary-button pure-button" %>
+        <%= link_to 'Sign up', signup_path, class: "secondary-button pure-button" %>
+        <%= link_to 'Log in', login_path, class: "secondary-button pure-button" %>
+      <% end %>
+    </div>
+</div>

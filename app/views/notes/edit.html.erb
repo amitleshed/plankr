@@ -1,0 +1,23 @@
+<%= render partial: "nav" %>
+<div class="hide-on-small-screens">
+  <%= render partial: "list" %>
+</div>
+<div id="main" class="pure-u-1">
+<%= form_for @note, remote: true do |f| %>
+  <div class="note-content">
+      <div class="note-content-header pure-g">
+          <div class="pure-u-1-2">
+              <h1 class="note-content-title">
+                <%= f.text_field :title, placeholder: "Title this note...", autofocus: true, required: true, class: "text-field" %>
+              </h1>
+          </div>
+      </div>
+
+      <div class="note-content-body">
+        <input id="content" type="hidden" name="note[content]" value="<%= @note.content %>">
+        <trix-editor input="content"></trix-editor>
+        <%= f.submit 'Update', class: "primary-button pure-button"%>
+      </div>
+  </div>
+<% end %>
+</div>

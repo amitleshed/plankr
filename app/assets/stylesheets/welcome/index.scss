@@ -1,0 +1,144 @@
+body{
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #1d2d35;
+  font-family: helvetica;
+}
+
+.button{
+  transition: all 0.2s ease;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #34A464;
+  color: #fff;
+  font-size: 130%;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  line-height: normal;
+  -webkit-appearance: none;
+  border: 0.1em solid #000;
+  border-radius: 3em;
+}
+
+.top-nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  z-index: 1000;
+  background-color: rgba(255,255,255,0.95);
+  box-sizing: border-box;
+}
+.top-nav__logo{
+  transition: all 0.1s ease-in-out;
+  display: block;
+  width: 9em;
+  margin: 0;
+  padding: 0;
+  color: #1d2d35;
+}
+
+.top-nav__list{
+  margin: 0;
+  padding: 0;
+  font-size: 75%;
+  font-weight: bold;
+}
+
+.top-nav__list-item{
+  display: inline-block;
+  margin: 0 0.16em;
+  vertical-align: middle;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 0;
+  &:--intro{
+    padding: 6em 0 4em 0;
+    min-height: 50vh;
+    justify-content: center;
+  }
+}
+
+.home-grid__intro-padding{
+  padding: 0;
+}
+
+.grid{
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+}
+
+.home-grid__intro{
+  max-width: 100%;
+  grid-column: 3 / span 11;
+  padding-top: 3em;
+  background-color: transparent;
+  
+  p{
+    font-size: 140%;
+  }
+}
+
+.heading{
+  margin: 0 0 0.25em 0;
+}
+
+.heading--xlarge{
+  font-size: 470%;
+}
+
+.heading--tight{
+  
+}
+
+.text-clipping{
+  vertical-align: middle;
+  background-color: #fff;
+  box-shadow: -0.5rem 0 0 #fff, 0.7rem 0 0 #fff;
+}
+
+.home-grid__signup{
+  margin: 0;
+  padding: 1em;
+  background-color: #f6f2ef;
+  border-radius: 0.25em;
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  .call-to-action{
+    grid-column: 3 / span 9;
+  }
+}
+
+.sketch-rule{
+  display: block;
+  height: 0.3em;
+  margin: 3em 0;
+  border: 0;
+  background: url(asset_path('hr.svg')) center/5em 200% repeat-x;
+}
+
+.grid__item{
+  width: 100%;
+}
+
+.grid__item--xlarge {
+    grid-column: 3 / span 20;
+}
+
+.home-grid__graphic{
+  max-width: 100%;
+  grid-column: 17 / span 5;
+  padding-top: 3em;
+  background-color: transparent;
+}

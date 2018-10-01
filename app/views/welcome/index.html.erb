@@ -1,0 +1,35 @@
+<nav class="top-nav" id="top">
+  <a class="top-nav__logo">
+    <%= image_tag('logo.svg') %>
+  </a>
+  <ul class="top-nav__list">
+    <li class="top-nav__list-item">
+      <%= link_to 'Try Now', '/notes', class: "button" %>
+    </li>
+  </ul>
+</nav>
+
+<main id="content">
+  <section class="wrapper wrapper--intro home-grid__intro-padding">
+    <div class="grid">
+      <div class="home-grid__intro">
+        <h1 class="heading heading--xlarge heading--tight">Study better with <b>plankr.</b></h1>
+        <p>
+          <span class="text-clipping">
+            Everyone runs into the same problems when studying.
+            Resources are spread all over the web, you research for the same stuff time and time again and have no idea where to start.
+            Luckily, Plankr solves it.
+          </span>
+        </p>
+        
+        <div class="home-grid__signup">
+          <%= link_to 'Try now, sign up later', notes_path, class: 'button button_primary call-to-action' %>
+        </div>
+      </div>
+      <div class="home-grid__graphic">
+        <%= image_tag('head-graphic.svg') %>
+      </div>
+      <hr class="sketch-rule grid__item grid__item--xlarge">
+    </div>
+  </section>
+</main>

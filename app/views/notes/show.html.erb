@@ -1,0 +1,28 @@
+<%= render partial: "nav" %>
+<div class="hide-on-small-screens">
+  <%= render partial: "list" %>
+</div>
+<div id="main" class="pure-u-1">
+<div class="note-content">
+  <div class="note-content-header pure-g">
+      <div class="pure-u-1-2">
+          <h1 class="note-content-title"><%= @note.title %></h1>
+          <p class="note-content-subtitle">
+              By <a>Amit Leshed</a> created at <span><%= @note.created_at.to_s(:short) %></span>
+          </p>
+      </div>
+
+      <div class="note-content-controls pure-u-1-2">
+          <%= link_to 'Edit', edit_note_path(@note), class: "secondary-button pure-button" %>
+          <%= link_to 'Delete', @note, method: :delete, data: {confirm: "Are you sure?", remote: true}, 
+                                       class: "secondary-button pure-button" %>
+      </div>
+  </div>
+
+  <div class="note-content-body">
+      <p>
+        <%= @note.content.html_safe %>
+      </p>
+  </div>
+</div>
+</div>
