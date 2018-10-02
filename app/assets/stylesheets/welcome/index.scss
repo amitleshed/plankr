@@ -98,8 +98,7 @@ body{
 }
 
 .home-grid__intro-bg{
-  padding-top: 20em;
-  background: #fff image-url('head-graphic.svg') center top 2em/13em no-repeat;
+  padding-top: 0em;
   
   @media (min-width: 820px){
     padding-top: 0em;
