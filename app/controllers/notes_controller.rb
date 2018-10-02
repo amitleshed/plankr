@@ -26,7 +26,7 @@ class NotesController < ApplicationController
   end
 
   def create
-    @note = Note.create! note
+    @note = current_user.notes.create! note
     redirect_to @note
   end
   

@@ -8,7 +8,7 @@
       <div class="pure-u-1-2">
           <h1 class="note-content-title"><%= @note.title %></h1>
           <p class="note-content-subtitle">
-              By <a>Amit Leshed</a> created at <span><%= @note.created_at.to_s(:short) %></span>
+              By <a><%= @note.user.name %></a> created at <span><%= @note.created_at.to_s(:short) %></span>
           </p>
       </div>
 
