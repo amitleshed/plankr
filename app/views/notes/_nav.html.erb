@@ -17,8 +17,7 @@
             <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "secondary-button pure-button" %>
             <%= link_to 'Add a note', new_note_path, class: "primary-button pure-button" %> 
           <% else %>
-            <%= link_to 'Sign in', new_user_session_path, class: "secondary-button pure-button" %>
-            <%= link_to 'Add a note', new_user_session_path, class: "primary-button pure-button" %>   
+            <%= link_to 'Sign in', new_user_session_path, class: "secondary-button pure-button" %> 
           <% end %>
         </li>
       </ul>
