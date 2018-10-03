@@ -15,8 +15,13 @@
     <% if notice%>
       <p class="notice"><%= notice %></p>
     <% end %>
-    <div id="layout" class="content pure-g">
+    
+    <% if current_page?(new_user_registration_path) || current_page?(user_session_path) || current_page?(new_user_password_path) %>
+      <%= yield %>
+    <% else %>
+      <div id="layout" class="content pure-g">
         <%= yield %>
-    </div>
+      </div>
+    <% end %>
   </body>
 </html>
