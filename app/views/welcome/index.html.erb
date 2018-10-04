@@ -1,30 +1,26 @@
-<nav class="top-nav" id="top">
-  <a class="top-nav__logo">
-    <%= image_tag('logo.svg') %>
-  </a>
-  <ul class="top-nav__list">
-    <li class="top-nav__list-item">
-      <%= link_to 'Try Now', '/notes', class: "button" %>
-    </li>
-  </ul>
-</nav>
-
-<main id="content">
-  <section class="wrapper wrapper--intro home-grid__intro-padding home-grid__intro-bg">
-    <div class="grid">
-      <div class="home-grid__intro">
-        <h1 class="heading heading--xlarge heading--tight">Study better with <b>plankr.</b></h1>
-        <p>
-          <span class="text-clipping">
-            Everyone runs into the same problems when learning something new. Resources are spread all over the web, you search for the same things time and time again. Stuff is scattered all over the place and you have no idea where to start. Here's how Plankr solves it.
-          </span>
-        </p>
-        
-        <div class="home-grid__signup">
-          <%= link_to 'Try now, sign up later', notes_path, class: 'button button_primary call-to-action' %>
-        </div>
+<main class="layout">
+  <section class="intro">
+    <div class="intro__inner">
+      <div class="head-logo-wrapper">
+        <%= image_tag('head-graphic.svg', class: 'head-logo') %>
       </div>
-      <hr class="sketch-rule grid__item grid__item--xlarge">
+      <h1 class="title">plankr</h1>
+      <br>
+      <p class="subtitle">Knowledge sharing tool</p>
+      <br>
+      <p class="small">
+        Everyone runs into the same problems when learning something new. Resources are spread all over the web, you search for the same things time and time again. Stuff is scattered all over the place and you have no idea where to start. Here's how Plankr solves it.
+      </p>
+      <p>
+        <%= link_to "Use for free", notes_path, class: 'button' %>
+      </p>
+    </div>
+  </section>
+  
+  <section class="trix-container">
+    <div class="trix-container__inner">
+      <input id="content" value="" type="hidden" name="note[content]">
+      <trix-editor input="content"></trix-editor>
     </div>
   </section>
 </main>

@@ -27,3 +27,26 @@ hr{
   border: 0;
   border-top: 0.1rem solid rgba(0,0,0,0.1);
 }
+
+
+html {
+  height: 100%;
+  font-size: 10px;
+}
+
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  background-color: #FBF7F0; 
+}
+  
+@media (min-width: 1080px) {
+  body {
+    font-size: calc(1.2em + 0.5vw); 
+  }
+}
