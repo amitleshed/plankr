@@ -13,7 +13,7 @@
       </div>
 
       <div class="note-content-controls pure-u-1-2">
-        <% if user_signed_in? %>
+        <% if current_user.id == @note.user.id %>
           <%= link_to 'Edit', edit_note_path(@note), class: "secondary-button pure-button" %>
           <%= link_to 'Delete', @note, method: :delete, data: {confirm: "Are you sure?", remote: true}, 
                                        class: "secondary-button pure-button" %>
