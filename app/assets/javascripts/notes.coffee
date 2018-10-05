@@ -10,7 +10,6 @@ Plankr = ->
       content = $(note).data('content').toUpperCase()
       
       if title.indexOf(userInput) isnt -1 then note.style.display = 'block' else note.style.display = 'none'
-      if title.indexOf(userContent) isnt -1 then note.style.display = 'block' else note.style.display = 'none'
       if userInput is '' then note.style.display = 'block'
       
 addEventListener 'turbolinks:load', Plankr
