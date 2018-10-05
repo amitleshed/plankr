@@ -23,6 +23,8 @@ body {
 }
 
 .user-search {
+  position: sticky;
+  top: 0;
   padding:1em .7em 1em .7em;
   border:none;
   border-bottom: 1px solid #d9d9d9;
