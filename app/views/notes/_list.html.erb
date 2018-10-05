@@ -3,7 +3,7 @@
   
   <% @notes.each do |note|%>
     <%= link_to note_path(note) do %>
-    <article class="note-item pure-g <%= select_current_note(note.id) %>" data-title="<%= note.title %>" id="note_<%=note.id%>" data-id="<%= note.id %>">
+    <article class="note-item pure-g <%= select_current_note(note.id) %>" data-title="<%= note.title %>" data-content="<%= note.content %>" id="note_<%=note.id%>" data-id="<%= note.id %>">
         <div class="pure-u-3-4">
             <h5 class="note-name">
               <%= note.title %>
