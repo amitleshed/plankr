@@ -22,6 +22,17 @@ body {
   display: none;
 }
 
+.user-search {
+  padding:1em .7em 1em .7em;
+  border:none;
+  border-bottom: 1px solid #d9d9d9;
+  border-left: 1px solid #d9d9d9;
+  width:95%;
+  &::placeholder{
+    color: rgba(0,0,0,.2);
+  }
+}
+
 .logo-container{
   width: 100%;
   .logo-wrapper{
