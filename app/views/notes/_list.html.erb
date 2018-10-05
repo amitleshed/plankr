@@ -1,7 +1,9 @@
 <div id="list" class="pure-u-1">
+  <input id="userSearch" type="text" style="padding:0.5em;border:none;border-bottom: 1px solid #d9d9d9;width:95%;" autocomplete="off">
+  
   <% @notes.each do |note|%>
     <%= link_to note_path(note) do %>
-    <div class="note-item pure-g <%= select_current_note(note.id) %>">
+    <article class="note-item pure-g <%= select_current_note(note.id) %>" data-title="<%= note.title %>" id="note_<%=note.id%>" data-id="<%= note.id %>">
         <div class="pure-u-3-4">
             <h5 class="note-name">
               <%= note.title %>
@@ -10,7 +12,7 @@
               <%= strip_tags(note.content).truncate(100) %>
             </p>
         </div>
-    </div>
+    </article>
     <% end %>
   <% end %>
 </div>
