@@ -7,7 +7,8 @@ Plankr = ->
 
     $notes.each (index, note) =>
       title = $(note).data('title').toUpperCase()
-      if userInput is title then note.style.display = 'block' else note.style.display = 'none'
+      
+      if title.indexOf(userInput) isnt -1 then note.style.display = 'block' else note.style.display = 'none'
       if userInput is '' then note.style.display = 'block'
       
 addEventListener 'turbolinks:load', Plankr
