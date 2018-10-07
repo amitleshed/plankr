@@ -230,11 +230,14 @@ a {
 }
 
 
-/* Email Item Styles */
+/* Note Item Styles */
 .note-item {
     padding: 0.9em 1em;
     border-bottom: 1px solid #ddd;
     border-left: 1px solid #ddd;
+    &:hover{
+      background-color: #f6f2ef;
+    }
 }
     .note-avatar {
         border-radius: 3px;
@@ -261,6 +264,12 @@ a {
 }
 
 /* Email Content Styles */
+.eye-wrapper{
+  display: inline-block;
+  width: 20px;
+  opacity: .6;
+}
+
 .note-content-header, .note-content-body, .note-content-footer {
     padding: 1em 2em;
 }

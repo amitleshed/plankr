@@ -7,6 +7,9 @@ class NotesController < ApplicationController
   end
 
   def show
+    @note_views = set_note.views
+    @note_views += 1
+    set_note.update_attribute "views", @note_views
   end
 
   def new

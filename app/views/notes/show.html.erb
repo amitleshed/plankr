@@ -10,6 +10,7 @@
           <p class="note-content-subtitle">
               By <a><%= @note.user.name %></a> created at <span><%= @note.created_at.to_s(:short) %></span>
           </p>
+          <p><div class="eye-wrapper"> <%= image_tag('eye.svg') %> </div> <%= @note_views %></p>
       </div>
 
       <div class="note-content-controls pure-u-1-2">

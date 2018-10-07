@@ -1,7 +1,7 @@
 <div id="list" class="pure-u-1">
   <input class="user-search" id="userSearch" type="text" autocomplete="off" placeholder="e.g. pentatonic scale">
   
-  <% @notes.each do |note|%>
+  <% @notes.order(:views).reverse.each do |note|%>
     <%= link_to note_path(note) do %>
     <article class="note-item pure-g <%= select_current_note(note.id) %>" data-title="<%= note.title %>" data-content="<%= note.content %>" id="note_<%=note.id%>" data-id="<%= note.id %>">
         <div class="pure-u-3-4">
